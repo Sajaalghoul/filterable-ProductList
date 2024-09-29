@@ -8,7 +8,7 @@ function Filtering({products,handleCateogry}:Props){
     <main role="main" className="main">
     <section className="flex main__display">
       <header role="header" className="flex display__header">
-        <select className="hover header__filter" id="filterCateogry" onClick={handleCateogry}>
+        <select className="hover header__filter" id="filterCateogry" onChange={handleCateogry}>
           <option value="allCategories">AllCategories</option>
           <option value="Sport">Sport</option>
           <option value="Clothes">Clothes</option>
