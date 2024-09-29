@@ -158,9 +158,8 @@ function displayCustomerProducts(products) {
   });
 }
 displayCustomerProducts(products);
-
 /////filter by cateogry
-filterCateogry.addEventListener("click", cateogryFiltering);
+filterCateogry.addEventListener("change", cateogryFiltering);
 function cateogryFiltering(cateogry) {
   customersProduct.innerHTML = "";
   cateogriesDisplayed = products.filter((product) => {
