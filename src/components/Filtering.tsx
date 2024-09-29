@@ -1,4 +1,8 @@
-function Filtering(){
+import ProductList from "./ProductList"
+interface Props{
+  products:product[]
+}
+function Filtering({products}:Props){
   return(
     <main role="main" className="main">
     <section className="flex main__display">
@@ -10,7 +14,9 @@ function Filtering(){
           <option value="Electronics">Electronics</option>
         </select>
       </header>
+      <ProductList products={products}></ProductList>
     </section>
+
   </main>
   
   )
