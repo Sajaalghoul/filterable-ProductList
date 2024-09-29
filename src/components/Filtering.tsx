@@ -1,13 +1,14 @@
 import ProductList from "./ProductList"
 interface Props{
-  products:product[]
+  products:product[],
+  handleCateogry:(e:any)=>void,
 }
-function Filtering({products}:Props){
+function Filtering({products,handleCateogry}:Props){
   return(
     <main role="main" className="main">
     <section className="flex main__display">
       <header role="header" className="flex display__header">
-        <select className="hover header__filter" id="filterCateogry">
+        <select className="hover header__filter" id="filterCateogry" onClick={handleCateogry}>
           <option value="allCategories">AllCategories</option>
           <option value="Sport">Sport</option>
           <option value="Clothes">Clothes</option>

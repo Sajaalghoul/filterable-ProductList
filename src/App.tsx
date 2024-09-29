@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Heading from './components/Heading'
 import FooterSec from './components/FooterSec'
 import Filtering from './components/Filtering'
@@ -143,10 +144,22 @@ function App() {
       category: "Clothes",
     },
   ];
+  const [filteredProducts, onset]=useState(products);
+  /////filter by cateogry
+  const cateogryFiltering=(cateogry:Event)=> {
+    const cateogryAs=cateogry.target as HTMLTextAreaElement;
+    onset(products.filter((product) => {
+      if (cateogryAs.value === "allCategories") {
+        return products;
+      } else {
+        return product.category.toLowerCase() === cateogryAs.value.toLowerCase();
+      }
+    }));
+  }
   return (
     <>
       <Heading></Heading>
-      <Filtering products={products}></Filtering>
+      <Filtering products={filteredProducts} handleCateogry={cateogryFiltering}></Filtering>
       <FooterSec></FooterSec>
       </>
   )
