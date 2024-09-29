@@ -1,6 +1,6 @@
-import Heading from './Heading'
-import FooterSec from './FooterSec'
-import Filtering from './Filtering'
+import Heading from './components/Heading'
+import FooterSec from './components/FooterSec'
+import Filtering from './components/Filtering'
 function App() {
   return (
     <>
